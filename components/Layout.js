@@ -13,22 +13,22 @@ export default function Layout({ title, children }) {
         <header>
           <nav className="flex h-12 items-center px-4 justify-between shadow-md bg-slate-200">
             <Link href="/">
-              <a className="text-lg font-bold">NextShop</a>
+              <a className="text-lg text-black font-bold">NextShop</a>
             </Link>
             <div>
               <Link href="/cart">
-                <a className="p-2">Cart</a>
+                <a className="p-2 text-black">Cart</a>
               </Link>
               <Link href="/login">
-                <a className="p-2">Login</a>
+                <a className="p-2 text-black">Login</a>
               </Link>
             </div>
           </nav>
         </header>
         <main className="container m-auto mt-4 px-4">{children}</main>
-        <fooster className="flex h-10 justify-center items-center shadow-inner bg-red-100">
+        <footer className="flex h-10 justify-center items-center shadow-inner bg-red-100">
           <p>Copyright &copy; 2022 NextShop</p>
-        </fooster>
+        </footer>
       </div>
     </>
   )
