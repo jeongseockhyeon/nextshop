@@ -20,6 +20,9 @@ export default function Layout({ title, children }) {
               <a className="text-lg text-black font-bold">NextShop</a>
             </Link>
             <div>
+              <Link href="/contect">
+                <a className="p-2 text-black">소개</a>
+              </Link>
               <Link href="/cart">
                 <a className="p-2 text-black">
                   Cart
