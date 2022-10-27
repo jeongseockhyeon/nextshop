@@ -9,6 +9,7 @@ import dynamic from 'next/dynamic'
 
 function CartScreen() {
   const { state, dispatch } = useContext(Store)
+  const router = useRouter()
   const {
     cart: { cartItems },
   } = state
@@ -91,7 +92,7 @@ function CartScreen() {
               </li>
               <li>
                 <button
-                  onClick={() => router.push('/shipping')}
+                  onClick={() => router.push('login?redirect=/shipping')}
                   className="primary-button w-full"
                 >
                   Check Out
