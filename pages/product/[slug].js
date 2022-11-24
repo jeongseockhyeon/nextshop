@@ -10,7 +10,7 @@ import Product from '../../models/Product'
 import { toast } from 'react-toastify'
 import axios from 'axios'
 
-export default function ProductScreen(product) {
+export default function ProductScreen({ product }) {
   const { state, dispatch } = useContext(Store)
   const router = useRouter()
   //const { query } = useRouter()
@@ -25,14 +25,11 @@ export default function ProductScreen(product) {
     const quantity = existItem ? existItem.quantity + 1 : 1
     const { data } = await axios.get(`/api/products/${product._id}`)
 
-    if (product.countInStock < quantity) {
+    if (data.countInStock < quantity) {
       return toast.error('Sorry. Product is out of stock')
     }
     dispatch({ type: 'CART_ADD_ITEM', payload: { ...product, quantity } })
     router.push('/cart')
-  }
-  if (!product) {
-    return <Layout title="Product Not Found">Product Not Found</Layout>
   }
 
   return (

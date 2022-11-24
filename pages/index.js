@@ -6,15 +6,16 @@ import Product from '../models/Product'
 //import data from '../utils/data'
 import db from '../utils/db'
 import { Store } from '../utils/Store'
+import axios from 'axios'
 
-export default function Home(products) {
+export default function Home({ products }) {
   const { state, dispatch } = useContext(Store)
   const { cart } = state
 
   const addToCartHandler = async (product) => {
-    const existItem = cart.cartItmes.find((x) => x.slug === product.slug)
+    const existItem = cart.cartItems.find((x) => x.slug === product.slug)
     const quantity = existItem ? existItem.quantity + 1 : 1
-    const { data } = await axios.get(`/api/products/${product.id}`)
+    const { data } = await axios.get(`/api/products/${product._id}`)
 
     if (data.countInStock < quantity) {
       return toast.error('Sorry.Product is out of stock')

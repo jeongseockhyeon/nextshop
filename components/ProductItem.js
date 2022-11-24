@@ -26,7 +26,7 @@ export default function ProductItem({ product, addToCartHandler }) {
           type="button"
           onClick={() => addToCartHandler(product)}
         >
-          Add to cart
+          카트에 담기
         </button>
       </div>
     </div>
