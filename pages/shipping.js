@@ -74,7 +74,7 @@ export default function ShippingScreen() {
             })}
           />
           {errors.address && (
-            <div className="text-red-500">{error.address.message}</div>
+            <div className="text-red-500">{errors.address.message}</div>
           )}
         </div>
         <div className="mb-4">
@@ -87,7 +87,7 @@ export default function ShippingScreen() {
             })}
           />
           {errors.city && (
-            <div className="text-red-500">{error.city.message}</div>
+            <div className="text-red-500">{errors.city.message}</div>
           )}
         </div>
         <div className="mb-4">
@@ -100,7 +100,7 @@ export default function ShippingScreen() {
             })}
           />
           {errors.postalCode && (
-            <div className="text-red-500">{error.postalCode.message}</div>
+            <div className="text-red-500">{errors.postalCode.message}</div>
           )}
         </div>
         <div className="mb-4">
@@ -111,7 +111,7 @@ export default function ShippingScreen() {
             {...register('country', { required: 'Please enter country' })}
           />
           {errors.country && (
-            <div className="text-red-500">{error.country.message}</div>
+            <div className="text-red-500">{errors.country.message}</div>
           )}
         </div>
         <div className="mb-4 flex justify-between">

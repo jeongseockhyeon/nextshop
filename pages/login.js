@@ -56,6 +56,7 @@ export default function LoginScreen() {
       const result = await signIn('google', {
         redirect: false,
       })
+      console.log('Google login:' + result)
     } catch (err) {
       toast.error(getError(err))
     }
@@ -65,6 +66,7 @@ export default function LoginScreen() {
       const result = await signIn('kakao', {
         redirect: false,
       })
+      console.log('Kakao login:' + result)
     } catch (err) {
       toast.error(getError(err))
     }
@@ -74,6 +76,7 @@ export default function LoginScreen() {
       const result = await signIn('naver', {
         redirect: false,
       })
+      console.log('Naver login:' + result)
     } catch (err) {
       toast.error(getError(err))
     }
