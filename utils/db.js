@@ -26,7 +26,7 @@ async function disconnect() {
       await mongoose.disconnect()
       connection.isConnected = false
     } else {
-      console.log('not cdisconnected')
+      console.log('not disconnected')
     }
   }
 }
