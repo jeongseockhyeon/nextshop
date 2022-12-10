@@ -64,7 +64,7 @@ function CartScreen() {
                         </a>
                       </Link>
                     </td>
-                    <td className="p-5 text-right">
+                    <td className="p-5 text-right text-black">
                       <select
                         value={item.quantity}
                         onChange={(e) =>
